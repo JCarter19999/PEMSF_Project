@@ -10,5 +10,5 @@ Now you can run project_group2.ipynb.
 
 
 # PEMSF_Project Prototype
-In order to our project prototype, you need to download the following files, Group2_Project_Prototype.ipynb, PEMS_test.txt, PEMS_trainlabels.txt, First_Day_Guess_label.txt, First_Day_Guess_test.txt, Second_Day_Guess_label.txt, Second_Day_Guess_test.txt, Third_Day_Guess_label.txt, and Third_Day_Guess_test.txt.
+In order to run our project prototype, you need to download the following files, Group2_Project_Prototype.ipynb, PEMS_test.txt, PEMS_trainlabels.txt, First_Day_Guess_label.txt, First_Day_Guess_test.txt, Second_Day_Guess_label.txt, Second_Day_Guess_test.txt, Third_Day_Guess_label.txt, and Third_Day_Guess_test.txt.
 Make sure all of the files are in the same directory when you run the python file, Group2_Project_Prototype.ipynb.
