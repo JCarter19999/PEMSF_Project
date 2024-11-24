@@ -8,7 +8,7 @@ This repo ultilized the PEM-SF dataset from the UCI Machine Learning Repository 
 4. Ensure all files are in the same directory prior to running the script.
 5. Run code.
 
-        # Files to run our PEMS-DF Traffic Classifer Model:
+        # Files to run our PEMS-SF Traffic Classifer Model:
             1. PEMS-SF_model.ipynb
             2. PEMS_train.txt
             3. PEMS_trainlabels.txt
@@ -35,7 +35,8 @@ Follow the steps above ("Instructions to run notebook") if not completed earlier
             10. random_forest_model.pkl
 
 
-# Part 3: PEMS_extractions ***Future Work (Status: WIP) : NOT A REQUIREMENT FOR THIS PROJECT - REQUIRES PEMS ACCOUNT***
+# Part 3: PEMS-SF_extractions <br>
+Future Work (Status: WIP) : **NOT A REQUIREMENT FOR THIS PROJECT - REQUIRES PEMS ACCOUNT** <br>
 The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data from https://pems.dot.ca.gov and pre-process it into a text file called self_test_txt. Note that is effort is a work in progress to work in progress to automatic the whole process of collecting and organizing the data into format that is readable by our model.
 
 # Instructions:
@@ -45,7 +46,7 @@ The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data 
 4. May adjust parameters accordingly to obtain desired information.
 5. Run code.
 
-        # Files to perform PEMS extraction
+        # Files to perform PEMS-SF extraction
             1. PEMS-SF_extractions.ipynb
             2. stations_list.txt
             
@@ -59,6 +60,6 @@ It should also be noted that the datasets have been preprocessed. Any attempts o
 
 Additionally, the author for PEMS-SF stated the numberical dates start with Day 1 = Monday. However, this has been corrected to Day 1 = Sunday to correctly match the information provided by Caltrans PeMS.
 
-# Reference
+# References
 Reference to original dataset for this project: https://archive.ics.uci.edu/dataset/204/pems+sf
 Cuturi, M. (2011). PEMS-SF [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52G70.
