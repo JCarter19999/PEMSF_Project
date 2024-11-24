@@ -1,5 +1,5 @@
-# Part 1: PEM-SF_model
-This repo ultilized the PEM-SF dataset from the UCI Machine Learning Repository to develop a training and test dataset as the bases to develop and train a robust traffic classifer model to determine the day-of-week.
+# Part 1: PEM-SF_model*
+This repository ultilizes the PEM-SF dataset from the UCI Machine Learning Repository. The goal for this project was to develop a robust traffic classifer model to determine the day-of-week based on the given datasets. This was completed through training, cross-validation, testing, implementation of machine learning, application of RandomForestClassifier, and hyperparameter tuning with RandomizedSearchCV. Additionally, various graphs, heatmaps, confusion matrices, etc. were developed to improve understanding and analysis of the datasets and model.
 
 # Instructions to run notebook  
 1. Download the zip file.
@@ -16,7 +16,7 @@ This repo ultilized the PEM-SF dataset from the UCI Machine Learning Repository 
             5. PEMS_testlabels.txt
        
 
-# Part 2: PEMS-SF_prototype
+# Part 2: PEMS-SF_prototype*
 This prototype classifies the day-of-week based on specific traffic inputs (must contain 963 features and 144 time dimensions).
 
 # Instructions
@@ -35,8 +35,8 @@ Follow the steps above ("Instructions to run notebook") if not completed earlier
             10. random_forest_model.pkl
 
 
-# Part 3: PEMS-SF_extractions <br>
-Future Work (Status: WIP) : **NOT A REQUIREMENT FOR THIS PROJECT - REQUIRES PEMS ACCOUNT** <br>
+# Part 3: PEMS-SF_extractions  
+Future Work (Status: **WIP**) : **<u>NOT A REQUIREMENT FOR THIS PROJECT</u>** - **REQUIRES PEMS ACCOUNT** <br>
 The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data from https://pems.dot.ca.gov and pre-process it into a text file called self_test_txt. Note that is effort is a work in progress to work in progress to automatic the whole process of collecting and organizing the data into format that is readable by our model.
 
 # Instructions:
@@ -51,7 +51,7 @@ The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data 
             2. stations_list.txt
             
 
-**Disclaimers** 
+## **Disclaimers** <br>
 The given test dataset from PEMS-SF was found to largely comprise of the same data in the training dataset. As a result, the original training dataset was split for ultilization for training, test crossvalidation, testing, and the demo.
 
 An attempt was made to generate our own test dataset from Caltrans PeMS. However, the author for the PEMS-SF did not provide instructions of how the datasets were preprocessed. Dimention reduction with incremental PCA after cleaning and normalization the data was tried but did not generate a test dataset that function desirabilty with the training data. 
@@ -60,6 +60,11 @@ It should also be noted that the datasets have been preprocessed. Any attempts o
 
 Additionally, the author for PEMS-SF stated the numberical dates start with Day 1 = Monday. However, this has been corrected to Day 1 = Sunday to correctly match the information provided by Caltrans PeMS.
 
+### **Note** <br>
+* The symbol "*" denotes a required section of the project (Part 1 and 2 are required). <br>
+* Part 3 is a work in progress for future work and is **NOT a requirement**.
+
 # References
-Reference to original dataset for this project: https://archive.ics.uci.edu/dataset/204/pems+sf
-Cuturi, M. (2011). PEMS-SF [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52G70.
+Reference to original dataset for this project: https://archive.ics.uci.edu/dataset/204/pems+sf <br> 
+Cuturi, M. (2011). PEMS-SF [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52G70. <br>
+California Department of Transportation, "Performance Measurement System (PeMS)," [Online]. Available: https://pems.dot.ca.gov/. [Accessed: 17-Nov-2024].
