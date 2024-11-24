@@ -52,13 +52,13 @@ The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data 
             
 
 ## **Disclaimers** <br>
-The given test dataset from PEMS-SF was found to largely comprise of the same data in the training dataset. As a result, the original training dataset was split for ultilization for training, test crossvalidation, testing, and the demo.
+* The given test dataset from PEMS-SF was found to largely comprise of the same data in the training dataset. As a result, the original training dataset was split for ultilization for training, test crossvalidation, testing, and the demo.
 
-An attempt was made to generate our own test dataset from Caltrans PeMS. However, the author for the PEMS-SF did not provide instructions of how the datasets were preprocessed. Dimention reduction with incremental PCA after cleaning and normalization the data was tried but did not generate a test dataset that function desirabilty with the training data. 
+* An attempt was made to generate our own test dataset from Caltrans PeMS. However, the author for the PEMS-SF did not provide instructions of how the datasets were preprocessed. Dimension reduction with incremental PCA after cleaning and normalization the data was tried but did not generate a test dataset that function desirabilty with the training data. 
 
-It should also be noted that the datasets have been preprocessed. Any attempts of dimentional reduction resulted in a suboptimal F1-score.
+* It should also be noted that the datasets have been preprocessed. Any attempts of dimentional reduction resulted in a suboptimal F1-score.
 
-Additionally, the author for PEMS-SF stated the numberical dates start with Day 1 = Monday. However, this has been corrected to Day 1 = Sunday to correctly match the information provided by Caltrans PeMS.
+* Additionally, the author for PEMS-SF stated the numberical dates start with Day 1 = Monday. However, this has been corrected to Day 1 = Sunday to correctly match the information provided by Caltrans PeMS.
 
 ### **Note** <br>
 * The symbol "*" denotes a required section of the project (Part 1 and 2 are required). <br>
