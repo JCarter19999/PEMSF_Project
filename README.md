@@ -1,19 +1,64 @@
-# PEMSF_Project
-This repo includes the test and training data based on the PEM_SF UCI Machine learning dataset, and our current code to train a model on it.
-The PEMS_train data file was too large to upload onto gitlab, even with it is compressed.
-You can download a copy of the PEMS_train data file here: https://drive.google.com/file/d/1i7nslTRzBPUx9lnWxKlVTn0ZkQF79icA/view?usp=sharing
-We created our model in the python file, project_group2.ipynb.
-In order to run project_group2.ipynb, you will need to down load PEMS_train from the google doc link above and move it into the same directory as the the python file.
-Next, you will have to download project_group2.ipynb, PEMS_trainlabels.txt, PEMS_test.txt, and PEMS_testlabels.txt as well.
-Make sure those files are in the same directory as project_group2.ipynb.
-Now you can run project_group2.ipynb.
+# Part 1: PEM-SF_model
+This repo ultilized the PEM-SF dataset from the UCI Machine Learning Repository to develop a training and test dataset as the bases to develop and train a robust traffic classifer model to determine the day-of-week.
 
-# PEMSF_Project Prototype
-In order to run our project prototype, you need to download the following files, Group2_Project_Prototype.ipynb, PEMS_test.txt, PEMS_trainlabels.txt, First_Day_Guess_label.txt, First_Day_Guess_test.txt, Second_Day_Guess_label.txt, Second_Day_Guess_test.txt, Third_Day_Guess_label.txt, and Third_Day_Guess_test.txt.
-Make sure all of the files are in the same directory when you run the python file, Group2_Project_Prototype.ipynb.
+# Instructions to run notebook  
+1. Download the zip file.
+2. Extract and save the files.
+3. Upload the files onto your notebook.
+4. Ensure all files are in the same directory prior to running the script.
+5. Run code.
 
-# Future Work Data Extraction
-The python file, Project_Data_Extractions.ipynb, extracts occupancy rate data from https://pems.dot.ca.gov. First, you will need to create account on https://pems.dot.ca.gov. Once the account is made on line 110 and 111 in the python file, Project_Data_Extractions.ipynb, you will need to input the username and password you just made. Next, you will need to download the file, stations_list.txt. The text consist of all of the sensor IDS used in collecting the original training dataset. Make sure the text file is in the same directory as Project_Data_Extractions.ipynb.
-Now you can run Project_Data_Extractions.ipynb.
-It will collect occupancy rate sensor data and pre-process it into a text file call self_test.txt.
-As an FYI, the python file, Project_Data_Extractions.ipynb is still a work in progress to automatic the whole process of collecting and organizing the data into format our model can read.
+        # Files to run our PEMS-DF Traffic Classifer Model:
+            1. PEMS-SF_model.ipynb
+            2. PEMS_train.txt
+            3. PEMS_trainlabels.txt
+            4. PEMS_test.txt
+            5. PEMS_testlabels.txt
+       
+
+# Part 2: PEMS-SF_prototype
+This prototype classifies the day-of-week based on specific traffic inputs (must contain 963 features and 144 time dimensions).
+
+# Instructions
+Follow the steps above ("Instructions to run notebook") if not completed earlier. 
+
+        # Files to ulitlize for PEMS-SF_prototype.ipynb
+            1. PEMS-SF_prototype.ipynb
+            2. PEMS_test.txt
+            3. PEMS_trainlabels.txt
+            4. guess_1_train.txt
+            5. guess_1_test.txt
+            6. guess_2_train.txt
+            7. guess_2_test.txt
+            8. guess_3_train.txt
+            9. guess_3_test.txt
+            10. random_forest_model.pkl
+
+
+# Part 3: PEMS_extractions ***Future Work (Status: WIP) : NOT A REQUIREMENT FOR THIS PROJECT - REQUIRES PEMS ACCOUNT***
+The python file, PEMS-SF_extractions.ipynb, extracts occupancy rate sensor data from https://pems.dot.ca.gov and pre-process it into a text file called self_test_txt. Note that is effort is a work in progress to work in progress to automatic the whole process of collecting and organizing the data into format that is readable by our model.
+
+# Instructions:
+1. Complete steps listed above ("Instructions to run notebook") if not done already.
+2. Create an account on https://pems.dot.ca.gov (**PEMS username & password required for script**) 
+3. In the PEMS-SF_extraction notebook, find the "Set-up access to Caltrans PeMS" section. This will be at the top of the cell. Update the USERNAME and PASSWORD portion of the script to your appropriate credentials.
+4. May adjust parameters accordingly to obtain desired information.
+5. Run code.
+
+        # Files to perform PEMS extraction
+            1. PEMS-SF_extractions.ipynb
+            2. stations_list.txt
+            
+
+**Disclaimers** 
+The given test dataset from PEMS-SF was found to largely comprise of the same data in the training dataset. As a result, the orignal training dataset was split for ultilization for training, test crossvalidation, testing, and the demo.
+
+An attempt was made to generate our own test dataset from Caltrans PeMS. However, the author for the PEMS-SF did not provide instructions of how the datasets were preprocessed. Dimention reduction with incremental PCA after cleaning and normalization the data was tried but did not generate a test dataset that function desirabilty with the training data. 
+
+It should also be noted that the datasets have been preprocessed. Any attempts of dimentional reduction resulted in a suboptimal F1-score.
+
+Additionally, the author for PEMS-SF stated the numberical dates start with Day 1 = Monday. However, this has been corrected to Day 1 = Sunday to correctly match the information provided by Caltrans PeMS.
+
+# Reference
+Reference to original dataset for this project: https://archive.ics.uci.edu/dataset/204/pems+sf
+Cuturi, M. (2011). PEMS-SF [Dataset]. UCI Machine Learning Repository. https://doi.org/10.24432/C52G70.
